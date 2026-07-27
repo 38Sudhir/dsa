@@ -8,7 +8,7 @@ public:
             if (x > largest) {
                 secondLargest = largest;
                 largest = x;
-            } else if (x > secondLargest) {
+            } else if (x >= secondLargest) {
                 secondLargest = x;
             }
         }
