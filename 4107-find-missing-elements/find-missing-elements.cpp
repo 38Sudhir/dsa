@@ -7,13 +7,17 @@ public:
             mini = min(mini, val);
             maxi = max(maxi, val);
         }
-        unordered_set<int> st(nums.begin(), nums.end());
+        vector<int> freq(maxi - mini + 1, 0);
+
+        for (int val : nums) {
+            freq[val - mini]++;
+        }
 
         vector<int> ans;
 
-        for (int i = mini; i <= maxi; i++) {
-            if (st.find(i) == st.end()) {
-                ans.push_back(i);
+        for (int i = 0; i < freq.size(); i++) {
+            if (freq[i] == 0) {
+                ans.push_back(i + mini);
             }
         }
 
