@@ -6,6 +6,7 @@ public:
 
         while (st <= end) {
             int mid = st + (end - st) / 2;
+
             if (target > nums[mid]) {
                 st = mid + 1;
             } else if (target < nums[mid]) {
