@@ -17,7 +17,5 @@ public:
             return true;
         else
             return false;
-
-        return -1;
     }
 };
